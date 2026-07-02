@@ -3,6 +3,7 @@ import Contact from "../section/Contact";
 import Hero from "../section/Hero";
 import Pricing from "../section/Pricing";
 import Navbar from "../component/layout/Navbar";
+import Footer from "../component/layout/Footer";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
           <Pricing />
           <Contact />
         </main>
+        <Footer />
       </div>
     </>
   );

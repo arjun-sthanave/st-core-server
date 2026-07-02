@@ -2,9 +2,16 @@ import type { AboutFeature } from "../types/about";
 import type { ContactItem } from "../types/contact";
 import type { HeroStats } from "../types/home";
 import type { PricingPlan } from "../types/pricing";
-
 import { Activity, Mail, MapPin, Shield, Terminal } from "lucide-react";
-
+import serverImg from "../../assets/img/server.jpg";
+import {
+    FacebookIcon,
+    InstagramIcon,
+    LinkedinIcon,
+    TwitterIcon,
+} from "../../component/icon/SocialIcons";
+import type { SocialLink } from "../types/footer";
+  
 export const HERO_STATS: HeroStats[] = [
   { value: "99.99%", label: "SLA GUARANTEED" },
   { value: "256-bit", label: "ENCRYPTION" },
@@ -92,4 +99,24 @@ export const inquiryTypes = [
     "Sales",
     "Technical Support",
     "Partnership",
+  ];
+
+
+
+
+  export const portfolioImages = [
+    serverImg,
+    serverImg,
+    serverImg,
+    serverImg,
+    serverImg,
+    serverImg,
+  ];
+  
+
+  export const socialLinks: SocialLink[] = [
+    { icon: FacebookIcon, label: "Facebook", href: "https://www.facebook.com/SthanaveTechnologies" },
+    { icon: TwitterIcon, label: "Twitter", href: "https://x.com/SthanaveTech" },
+    { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/company/sthanave-technologies/" },
+    { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/sthanavetech?igsh=MTNsZTEzNGtsYTV1Mw%3D%3D" },
   ];
