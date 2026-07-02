@@ -1,6 +1,6 @@
 import { ArrowRight, Globe, Server } from "lucide-react";
 import { HERO_STATS } from "../constant/utils/data";
-
+import serverImg from "../assets/img/server.jpg";
 export default function Hero() {
   return (
     <section id="hero" className="section">
@@ -89,7 +89,10 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="mt-4 h-36 rounded-xl border border-white/10 bg-gradient-to-br from-cyan-500/20 via-primary-600/20 to-purple-900/40" />
+            <div className="mt-4 h-60 rounded-xl border border-white/10 bg-gradient-to-br from-cyan-500/20 via-primary-600/20 to-purple-900/40">
+              <img src={serverImg} alt="Server" className="w-full h-full object-cover" />
+            </div>
+           
           </div>
         </div>
       </div>
