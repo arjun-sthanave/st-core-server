@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-5;
+  }
+
+  .section {
+    @apply py-20;
+  }
+
+  .heading {
+    @apply text-4xl md:text-5xl font-bold text-text-primary;
+  }
+
+  .paragraph {
+    @apply text-text-secondary leading-7;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition duration-300;
+  }
+
+  .btn-outline {
+    @apply border border-primary-600 text-primary-600 px-6 py-3 rounded-lg hover:bg-primary-600 hover:text-white transition;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6;
+  }
+}
