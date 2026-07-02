@@ -1,20 +1,5 @@
-import { Activity, Shield } from "lucide-react";
 import serverImg from "../assets/img/server.jpg";
-
-const features = [
-  {
-    icon: Shield,
-    title: "Unrivaled Privacy",
-    description:
-      "Zero-trust architecture with end-to-end encryption and strict data sovereignty.",
-  },
-  {
-    icon: Activity,
-    title: "99.99% Uptime",
-    description:
-      "Multi-layered redundancy across global Tier 4 data centers.",
-  },
-];
+import { ABOUT_FEATURES } from "../constant/utils/data";
 
 export default function About() {
   return (
@@ -45,7 +30,7 @@ export default function About() {
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {features.map((item) => {
+              {ABOUT_FEATURES.map((item) => {
                 const Icon = item.icon;
 
                 return (
