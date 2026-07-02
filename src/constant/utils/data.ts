@@ -1,8 +1,9 @@
 import type { AboutFeature } from "../types/about";
+import type { ContactItem } from "../types/contact";
 import type { HeroStats } from "../types/home";
 import type { PricingPlan } from "../types/pricing";
 
-import { Activity, Shield } from "lucide-react";
+import { Activity, Mail, MapPin, Shield, Terminal } from "lucide-react";
 
 export const HERO_STATS: HeroStats[] = [
   { value: "99.99%", label: "SLA GUARANTEED" },
@@ -64,3 +65,31 @@ export const PRICING_PLANS: PricingPlan[] = [
     button: "Contact Sales",
   },
 ];
+
+export const CONTACT_ITEMS: ContactItem[] = [
+  {
+    icon: Mail,
+    title: "General Support",
+    value: "support@protonservers.io",
+    iconClassName: "bg-primary-600/20 text-primary-300",
+  },
+  {
+    icon: MapPin,
+    title: "Global Headquarters",
+    value: "Bahnhofstrasse 10, 8001 Zurich, Switzerland",
+    iconClassName: "bg-cyan-500/15 text-cyan-300",
+  },
+  {
+    icon: Terminal,
+    title: "Emergency NOC",
+    value: "ssh noc@emergency.protonservers.io",
+    iconClassName: "bg-primary-600/20 text-primary-300",
+  },
+];
+
+export const inquiryTypes = [
+    "General Inquiry",
+    "Sales",
+    "Technical Support",
+    "Partnership",
+  ];

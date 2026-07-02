@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-black/60 backdrop-blur-xl border-b border-white/10 border-b border-border">
+    <header className="bg-black/60 backdrop-blur-xl border-b border-white/10 border-b border-border fixed top-0 left-0 right-0 z-50">
 
       <div className="container-custom">
 
@@ -102,7 +102,7 @@ export default function Navbar() {
             <Link
               to="/pricing"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-4 py-3 text-sm font-semibold text-primary-300 hover:bg-primary-700 transition"
+              className="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-4 py-3 text-sm font-semibold text-primary-100 hover:bg-primary-700 transition"
             >
               Get Started
             </Link>
