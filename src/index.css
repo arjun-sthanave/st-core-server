@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #0b0a12;
+    background-image:
+      radial-gradient(1100px 700px at 18% -8%, rgba(109, 74, 255, 0.35), transparent 62%),
+      radial-gradient(900px 650px at 78% 10%, rgba(139, 92, 246, 0.18), transparent 60%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.35));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 @layer components {
   .container-custom {
     @apply mx-auto max-w-7xl px-5;
@@ -30,4 +50,5 @@
   .card {
     @apply bg-white rounded-xl shadow-card p-6;
   }
+
 }

@@ -6,15 +6,15 @@ import Navbar from "../component/layout/Navbar";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main   >
-        <Hero />
-        <About />
-        <Pricing />
-        <Contact />
-      </main>
-
-   
+      <div className="min-h-screen w-full">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Pricing />
+          <Contact />
+        </main>
+      </div>
     </>
   );
 }
