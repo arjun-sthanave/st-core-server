@@ -3,22 +3,22 @@ import type { NavigationType } from "./types/navbar";
 export const NAVIGATION: NavigationType[] = [
     {
       title: "Home",
-      id: "home",
+      id: "hero",
       path: "/",
     },
     {
       title: "About",
-      id: "about-us",
+      id: "about",
       path: "/about",
     },
     {
       title: "Pricing",
-      id: "pricing-plans",
+      id: "pricing",
       path: "/pricing",
     },
     {
       title: "Contact",
-      id: "contact-us",
+      id: "contact",
       path: "/contact",
     },
   ];

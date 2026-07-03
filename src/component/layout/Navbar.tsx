@@ -3,9 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { NAVIGATION } from "../../constant/navigation";
 import { Menu, X } from "lucide-react";
+import { useNavigation } from "../../constant/hooks/useNavigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+   const {scrollToSection } = useNavigation();
 
   return (
     <header className="bg-black/60 backdrop-blur-xl border-b border-white/10 border-b border-border fixed top-0 left-0 right-0 z-50">
@@ -30,6 +32,7 @@ export default function Navbar() {
               <NavLink
                 key={item.id}
                 to={item.path}
+                onClick={() => scrollToSection(item.id, item.path)}
                 end={item.path === "/"}
                 className={({ isActive }) =>
                   `relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
@@ -50,6 +53,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
 
             <Link
+            onClick={() => scrollToSection("pricing", "/pricing")}
               to="/pricing"
               className="btn-primary hidden sm:inline-flex"
             >
@@ -88,7 +92,8 @@ export default function Navbar() {
                 key={item.id}
                 to={item.path}
                 end={item.path === "/"}
-                onClick={() => setOpen(false)}
+                onClick={() => scrollToSection(item.id, item.path)}
+               
                 className={({ isActive }) =>
                   isActive
                     ? "flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold text-white bg-white/10"
@@ -100,8 +105,8 @@ export default function Navbar() {
             ))}
 
             <Link
+            onClick={() => scrollToSection("pricing", "/pricing")}
               to="/pricing"
-              onClick={() => setOpen(false)}
               className="mt-3 inline-flex w-full items-center justify-center rounded-xl bg-primary-600 px-4 py-3 text-sm font-semibold text-primary-100 hover:bg-primary-700 transition"
             >
               Get Started
